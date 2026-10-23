@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="description" content="RRT* grows a tree around obstacles and improves the route.">
+  <title>RRT pathfinder · Dan1l0s</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>RRT pathfinder</h1>
+      <a href="https://github.com/Dan1l0s/rrt-pathfinder">Dan1l0s</a>
+    </header>
+    <canvas id="canvas" width="700" height="440" role="img" aria-label="A search tree grows around obstacles and finds a shorter route between two points."></canvas>
+    <div class="controls">
+      <button id="play" type="button" aria-pressed="false">Play</button>
+      <button id="restart" type="button">Restart</button>
+      <label class="theme">Theme
+        <select id="theme">
+          <option value="system">System</option>
+          <option value="dark">Dark</option>
+          <option value="light">Light</option>
+        </select>
+      </label>
+    </div>
+    <div class="timeline">
+      <label class="sr-only" for="timeline">Animation time</label>
+      <input id="timeline" type="range" min="0" max="24" step="0.05" value="18">
+      <output id="time" for="timeline">18.0 / 24 s</output>
+    </div>
+    <p id="status"></p>
+  </main>
+</body>
+</html>
